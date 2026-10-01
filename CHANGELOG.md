@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [connect] Add method `add_to_queue` to `Spirc` to add tracks, episodes, albums and playlists to the queue
 - [connect] Add method `clear_queue` to `Spirc` to remove all manually queued tracks
 - [core] Add method `get_playlist_range` to `SpClient` to fetch a window of a playlist's items with its header decorated on
+- [playback] Report completed and interrupted decoded Spotify playback to listening history; add `Player::stop_and_flush` to drain reports before runtime shutdown. Passthrough output and local files are not reported.
 - [metadata] Add `Playlist::get_range` to fetch a window of a playlist's items without downloading the whole list
 - [playback] Add `SetQueue` player event, emitting when the queue changes (context loaded, track added to queue, or queue set via Spotify Connect). Gated behind `ConnectConfig::emit_set_queue_events`
 - [playback] Add `normalisation_report` field to `PlayerConfig` to receive the normalisation factor of each track as it starts playing (breaking)
